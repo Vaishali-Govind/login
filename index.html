@@ -1,214 +1,135 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<link href="responsive_style.css" type="text/css" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Myriad Pro", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+    }
 
-<style>
+    .form_div {
+      margin-top: 5%;
+      margin-left: 5%;
+      width: 25%;
+      border: 3px solid #f1f1f1;
+      box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    }
 
-body
-{
-margin: 0;
- font-family: "Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
- 
-}
-#wrapper
-{
- margin:0 auto;
- margin-top: 5%;
- padding:0px;
+    .form_div input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 1.02em 1em;
+      margin: 1em 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
 
- width:60em;
-}
+    .login {
+      background-color: #009688;
+      color: white;
+      padding: 1.08em 1em;
+      margin: 3% 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
 
-.form_div
-{
-width:37%;
-margin-left:-15em;
-padding:10px;
-border: 3px solid #f1f1f1;
-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-}
+    button:hover {
+      opacity: 0.8;
+    }
 
-.form_div input[type="text"],input[type="password"]
-{
+    .cancelbtn {
+      width: auto;
+      background-color: #fc5258;
+      color: white;
+      padding: 1.0em 1em;
+      margin: -1% 0;
+      border: none;
+      cursor: pointer;
+      width: 40%;
+    }
 
-width: 100%;
-  padding: 1.02em 1em;
-  margin: 1em 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-.login
-{
+    .imgcontainer {
+      text-align: center;
+      margin: 1em 0 1.02em 0;
+    }
 
-background-color: #009688;
-  color: white;
-  padding: 1.08em 1em;
-  margin: 3% 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
+    .avatar {
+      width: 7em;
+      height: 7em;
+      margin-top: 1%;
+    }
 
-button:hover {
-  opacity: 0.8;
-}
+    .container {
+      padding: 1.05em;
+    }
 
-.cancelbtn {
-  width: auto;
- 
-  background-color:#fc5258;
+    span.psw {
+      float: right;
+      padding-top: 1em;
+    }
 
-  color: white;
-  padding: 1.0em 1em;
-  margin: -1% 0;
-  border: none;
-  cursor: pointer;
-  width: 40%;
-}
+    a {
+      color: teal;
+    }
 
-.imgcontainer {
-  text-align: center;
-  margin:1em 0 1.02em 0;
-}
+    @media screen and (max-width: 992px) {
+      .form_div {
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 5%;
+      }
+    }
 
-.avatar {
-  width: 55%;
-  border-radius: 50%;
-  margin-top: -4%;
-}
+    @media screen and (max-width: 768px) {
+      .form_div {
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 5%;
+      }
+    }
 
-.container {
-  padding: 1.05em;
-}
-
-span.psw {
-  float: right;
-  padding-top: 1em;
-}
-a{
-  color: teal;
-}
-
-@media only screen and (min-width:700px) and (max-width:995px)
-{
-#wrapper
-{
-width:100%;
-}
-/* #wrapper h1
-{
-font-size:30px;
-} */
-.form_div
-{
-width:50%;
-margin-left:25%;
-padding-left:0px;
-padding-right:0px;
-}
-.form_div input[type="text"],input[type="password"]
-{
-width:100%;
-}
-.form_div textarea
-{
-width:80%;
-}
-.form_div input[type="submit"]
-{
-width:80%;
-}
-}
-@media only screen and (min-width:400px) and (max-width:699px)
-{
-#wrapper
-{
-width:100%;
-}
-
-.form_div
-{
-width:60%;
-margin-left:20%;
-}
-.form_div input[type="text"],input[type="password"]
-{
-width:100%;
-}
-.form_div input[type="submit"]
-{
-width:80%;
-}
-}
-@media only screen and (min-width:100px) and (max-width:399px)
-{
-#wrapper
-{
-width:100%;
-}
-
-.form_div
-{
-width:90%;
-margin-left:5%;
-padding-left:0px;
-padding-right:0px;
-}
-.form_div input[type="text"],input[type="password"]
-{
-width:100%;
-}
-.form_div input[type="submit"]
-{
-width:80%;
-}
-}
-.imgcontainer {
-  text-align: center;
-  margin: 2em 0 1.02em 0;
-}
-
-img.avatar {
-  width: 20%;
-  border-radius: 50%;
-}
-
-</style>
+    @media screen and (max-width: 576px) {
+      .form_div {
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 5%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div id="wrapper">
+  <div class="form_div">
+    <div class="imgcontainer">
+      <img src="sust.jpg" class="avatar">
+    </div>
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
 
-<div class="form_div">
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
 
-        <div class="imgcontainer">
-                <img src="sust.jpg"class="avatar">
-              </div>
-            
-              <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-            
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-                    
-                <button type="submit" class="login">Login</button>
-                <label>
-                  <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-              </div>
-            
-              <div class="container" style="background-color:#f1f1f1">
-                <button type="button" class="cancelbtn">Create Account</button>
-                <span class="psw"><a href="#">Forgot password?</a></span>
-              </div>
-</form>
-</div>
+      <button type="submit" class="login">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Create Account</button>
+      <span class="psw"><a href="#">Forgot password?</a></span>
+    </div>
 
-
-</div>
-
-
+  </div>
 </body>
+
 </html>
