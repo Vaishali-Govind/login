@@ -1,115 +1,224 @@
 <html>
-    <head>
-       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-     
-      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-        <link rel="stylesheet" href="style.css" >
-     
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="responsive_style.css" type="text/css" rel="stylesheet"/>
+
 <style>
-html {
-  font-size: 14px;
+
+body
+{
+ margin:0 auto;
+
+ padding:0px;
+
+ width:100%;
+ font-family: "Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+ 
 }
-body {font-family: Arial, Helvetica, sans-serif;}
-.btn{
-  float: right;
-  padding: 0 26px;
+#wrapper
+{
+ margin:0 auto;
+ margin-top: 5%;
+ padding:0px;
+
+ width:995px;
 }
-.mg{
-  margin-top: 50px;
+
+.form_div
+{
+width:330px;
+margin-left:-15em;
+padding:10px;
+border: 3px solid #f1f1f1;
+box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
 }
-/* .card-title {
-    background: linear-gradient(45deg, #fdce4e 0%, #f9d423 100%);
-    background: -moz-linear-gradient(45deg, #fdce4e 0%, #f9d423 100%);
-    background: -webkit-linear-gradient(45deg, #fdce4e 0%, #f9d423 100%);
-   color: #6d4206;
-} */
+
+.form_div input[type="text"],input[type="password"]
+{
+
+width: 100%;
+  padding: 1.02em 1em;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.login
+{
+
+background-color: #009688;
+  color: white;
+  padding: 1.08em 1em;
+  margin: 3% 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+ 
+  background-color:#fc5258;
+
+  color: white;
+  padding: 1.0em 1em;
+  margin: -1% 0;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+}
+
 .imgcontainer {
   text-align: center;
-  margin: -25px 0 9px 0;
+  margin:1em 0 1.02em 0;
+}
+
+.avatar {
+  width: 55%;
+  border-radius: 50%;
+  margin-top: -4%;
+}
+
+.container {
+  padding: 1.05em;
+}
+
+span.psw {
+  float: right;
+  padding-top: 1em;
+}
+a{
+  color: teal;
+}
+
+@media only screen and (min-width:700px) and (max-width:995px)
+{
+#wrapper
+{
+width:100%;
+}
+/* #wrapper h1
+{
+font-size:30px;
+} */
+.form_div
+{
+width:50%;
+margin-left:25%;
+padding-left:0px;
+padding-right:0px;
+}
+.form_div input[type="text"],input[type="password"]
+{
+width:100%;
+}
+.form_div textarea
+{
+width:80%;
+}
+.form_div input[type="submit"]
+{
+width:80%;
+}
+}
+@media only screen and (min-width:400px) and (max-width:699px)
+{
+#wrapper
+{
+width:100%;
+}
+#wrapper h1
+{
+font-size:30px;
+}
+.form_div
+{
+width:60%;
+margin-left:20%;
+}
+.form_div input[type="text"],input[type="password"]
+{
+width:100%;
+}
+.form_div input[type="submit"]
+{
+width:80%;
+}
+}
+@media only screen and (min-width:100px) and (max-width:399px)
+{
+#wrapper
+{
+width:100%;
+}
+#wrapper h1
+{
+font-size:25px;
+}
+.form_div
+{
+width:90%;
+margin-left:5%;
+padding-left:0px;
+padding-right:0px;
+}
+.form_div input[type="text"],input[type="password"]
+{
+width:100%;
+}
+.form_div input[type="submit"]
+{
+width:80%;
+}
+}
+.imgcontainer {
+  text-align: center;
+  margin: 2em 0 1.02em 0;
 }
 
 img.avatar {
   width: 20%;
   border-radius: 50%;
 }
-.card{
-    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-    padding: 10%;
-}
-.cancel {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-  /* margin-top: 5%; */
-  margin-top: 20px;
-  margin-left: 80%;
-}
-a{
-  color: teal;
-}
-.cancelbtn {
- float: left;
-  background-color:#ee6e73;
-}
-
 
 </style>
-
-
-    </head>
+</head>
 <body>
-<!-- <div class="container">
-  
-    
-  <div class="row"> -->
-      <form>
-        <div class="row">
-         
-            <div class="col s12 m6 offset-m3">
-                  <div class="card center-align mg">
-                    
-                      <!-- <div class="card-content"> -->
-                        <div class="imgcontainer">
-                            <img src="sust.jpg"class="avatar">
-                          </div>
-                          <div class="input-field">
-                              <input id="email" type="email" class="validate">
-                              <label for="email">Email</label>
-                          </div>
-                          <div class="input-field" >
-                              <input id="password" type="password" class="validate">
-                              <label for="password">Password</label>
-                            
-                          </div>
-                          <button class="btn waves-effect waves-light" type="submit" name="action">Login
-                            <i class="material-icons right">send</i>
-                          </button>
-                            
+<div id="wrapper">
 
-                          <button class="btn waves-effect waves-light cancelbtn" type="submit" name="action">Create Account
-                            <i class="material-icons right">send</i>
-                          </button>
-                          <br>
-    <span class="psw"><a href="#">Forgot password?</a></span>
- 
-                      </div>
-                     
-                          
-                    </div>
-                  </div>
-            </div>
-       
-     
-      </form>  
-   
-  <!-- </div>
-</div> -->
- 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<div class="form_div">
+
+        <div class="imgcontainer">
+                <img src="sust.jpg"class="avatar">
+              </div>
+            
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                    
+                <button type="submit" class="login">Login</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+              </div>
+            
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Create Account</button>
+                <span class="psw"><a href="#">Forgot password?</a></span>
+              </div>
+</form>
+</div>
+
+
+</div>
+
+
 </body>
 </html>
